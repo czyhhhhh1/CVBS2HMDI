@@ -1,0 +1,51 @@
+# ---- Keil MDK / C51 build outputs ----
+*.uvguix.*
+*.uvgui.*
+*.uvopt
+*.uvoptx
+*.bak
+*.dep
+*.crf
+*.d
+*.o
+*.obj
+*.axf
+*.elf
+*.hex
+*.bin
+*.map
+*.lst
+*.m51
+*.lnp
+*.plg
+*.iex
+*.sct
+*.build_log.htm
+*.scvd
+Objects/
+Output/
+Listings/
+RTE/_Project/*.c
+
+# ---- AMT630A specific build outputs ----
+amt630a/Keil Prj/64K/Hex/
+amt630a/Keil Prj/64K/List/
+amt630a/Keil Prj/Bin/*
+!amt630a/Keil Prj/Bin/.gitkeep
+amt630a/OSD/Logo/List/
+amt630a/OSD/Logo/Hex/Logo
+amt630a/OSD/Logo/Hex/*.lnp
+amt630a/OSD/Logo/Hex/*.obj
+amt630a/OSD/Logo/Hex/*.plg
+
+# The logo hex is a required input for HexMerge, keep it.
+!amt630a/OSD/Logo/Hex/Logo.hex
+
+# ---- EIDE / GCC build outputs ----
+py32/EIDE/Project/
+py32/EIDE/build/
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+*.swp

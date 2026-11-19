@@ -1,0 +1,18 @@
+* text=auto
+
+# AMT630A / Keil C51 sources are GBK/ANSI with CRLF.
+# Keep their bytes untouched so Chinese comments stay readable in Keil.
+amt630a/** -text
+
+# PY32 sources, projects and HAL are UTF-8/ASCII.
+py32/** text
+
+# Binary assets
+*.pdf binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.eprj2 binary
+*.LIB binary
+*.lib binary
+*.exe binary
