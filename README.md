@@ -186,14 +186,3 @@ XBYTE[0xFFDA] = 0x6C;      /* 雪花大小/源 */
 2. **自动 50/60Hz 跟随**依赖 SII9022A 的 `H_RES/V_RES` 测量。如果某些板子测量不到，短按按键强制 60Hz 或 50Hz。
 3. **低信号雪花**取决于 AMT630A 解码器是否判定 `tv_active`。如果极低信号下仍然黑而不是雪花，可以继续调 `0xFE10 hjit_max`、`0xFE11 hlock_num_thr`，或用 `0xFE28 noisy_flag` 提前强制雪花。
 4. **PY32 型号**：Keil 工程按 `PY32F003x8`（64KB Flash / 8KB RAM）配置，编译出的 RW 约 7.5KB。若实际焊接的是 16KB/2KB 的 `PY32F003L24D6`，需要改器件、减小 RAM 并调整配置页地址；请先确认芯片丝印和实际容量。
-
-## 第三方代码与许可
-
-本仓库包含多个厂商的代码/二进制，**上传公开仓库前请确认你有权分发**：
-
-- `py32/Drivers/`：Puya PY32F0xx HAL/CMSIS，BSD-3-Clause。
-- `py32/Src/sil9022.c`、`py32/Inc/sil9022.h`：Silicon Image SiI9022A 驱动；文件头为 GPL-2.0，请保留原版权声明。
-- `amt630a/ARKLib/*.LIB`、`amt630a/PC Tool/*.exe`、ARK SDK 源码：ARK Micro（艾科创新）的 AMT630A SDK，通常为厂商授权代码，不一定允许公开再分发。若没有明确授权，建议把仓库设为 private，或删除这些厂商二进制/源码后再公开。
-- `board/` 下的原理图、PCB、渲染图和测试照片为你自己的硬件资料。
-
-如果准备公开到 GitHub，建议先阅读各文件头部的版权说明，并在仓库中保留本节的第三方声明。
